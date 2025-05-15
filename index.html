@@ -10,13 +10,15 @@ abstract: Minwoo Jang (he/him) is a graduate student in Graduate School of Artif
 
 <style>
   .news-item {
-    padding-left: 5em;
-    text-indent: -5em;
+    display: flex;
   }
   .news-date {
-    display: inline-block;
     width: 5em;
     font-weight: bold;
+    flex-shrink: 0;
+  }
+  .news-text {
+    flex: 1;
   }
 </style>
 
@@ -29,11 +31,15 @@ abstract: Minwoo Jang (he/him) is a graduate student in Graduate School of Artif
 <div class="BodyText">
     <p class="news-item">
         <span class="news-date">[May 2025]</span>
+      <span class="news-text">
         LoRA-A<sup>2</sup> has been accepted to ACL 2025 Main.
+      </span>
     </p>
     <p class="news-item">
         <span class="news-date">[Oct 2024]</span>
+      <span class="news-text">
         A pre-print paper about Communication-Efficient FL + LoRA has been uploaded in <a href="https://arxiv.org/abs/2410.22815" target="_blank">arXiv</a>.
+      </span>
     </p>
 
 <p class="Section">3 &ensp; Contact</p>
