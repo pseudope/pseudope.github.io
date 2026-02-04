@@ -7,150 +7,138 @@
     src: url(../fonts/cmuserif_bold_macroman/cmunbx-webfont.woff);
   }
 
+:root {
+    color-scheme: light;
+}
 
-.LatexTitle{
-    font-family: CMR;
-    font-size: 40px;
-    padding-top: 10vh;
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    background: #fff;
+}
+
+.icml-page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 36px 32px 96px;
+}
+
+.icml-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-.LatexName{
-    font-family: CMR;
-    font-size: 27px;
-    text-align: center;
-    margin-bottom: 13px;
-}
-.LatexDate{
-    font-family: CMR;
-    font-size: 27px;
-    text-align: center;
-    margin-top: 13px;
-    margin-bottom: 45px;
+.icml-rule {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 10px 0 18px;
 }
 
-.LatexAbstract{
-    font-family: CMB;
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 10px;
+.icml-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: 0.2px;
 }
 
-.LatexAbstractText{
-    margin-top:10px;
-    font-family: CMR;
-    font-size: 21px;
-    text-align: center;
-    text-align: justify;
-    text-indent: 20px
+.icml-authors {
+    font-size: 16px;
+    margin: 0 0 4px;
 }
 
-.Margins{
-    padding-left: 21%;
-    width: 58%;
+.icml-affiliation,
+.icml-date {
+    font-size: 14px;
+    margin: 0 0 4px;
 }
 
-.AbstractMargins{
-    padding-left: 6%;
-    width: 88%;
-    padding-bottom: 15px;
-}
-
-.Section{
-    font-family: CMB;
-    font-size: 33px;
-    text-align: Left;
-    margin-top: 13px;
-    margin-bottom: 20px;
-}
-
-
-.SubSection{
-    font-family: CMB;
-    font-size: 29px;
-    text-align: Left;
-    margin-top: 13px;
-    margin-bottom: 20px;
-}
-
-.BodyText{
-    font-family: CMR;
-    font-size: 23px;
-    text-align: Left;
-    margin-top: 13px;
-    margin-bottom: 45px;
-    line-height: 125%;
-    column-count: 1;
-}
-
-.BodyText2Col{
-    font-family: CMR;
-    font-size: 23px;
-    text-align: Left;
-    margin-top: 13px;
-    margin-bottom: 45px;
-    line-height: 125%;
-    column-count: 2;
-}
-
-.BodyText3Col{
-    font-family: CMR;
-    font-size: 23px;
-    text-align: Left;
-    margin-top: 13px;
-    margin-bottom: 45px;
-    line-height: 125%;
-    column-count: 3;
-}
-
-.Justified{
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.footerSize{
-    height: 30vh;
-    width: 100%;
-}
-
-.tiny{
-    font-size: 8px;
-}
-
-.scriptsize{
-    font-size: 11px;
-}
-
-.footnotesize{
+.icml-preprint {
     font-size: 13px;
+    font-style: italic;
+    margin: 6px 0 0;
 }
 
-.small{
-    font-size: 15px;
+.icml-abstract {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    border: 1px solid #000;
+    padding: 10px 14px 12px;
 }
 
-.normalsize{
-    font-size: 18px;
+.icml-abstract-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0 0 6px;
+    text-align: left;
 }
 
-.large{
-    font-size: 19px;
+.icml-abstract-text {
+    font-size: 13px;
+    line-height: 1.45;
+    margin: 0;
+    text-align: justify;
 }
 
-.Large{
-    font-size: 23px;
+.icml-content {
+    font-size: 13px;
+    line-height: 1.55;
+    column-count: 2;
+    column-gap: 32px;
+    column-rule: 1px solid #000;
+    column-fill: balance;
 }
 
-.LARGE{
-    font-size: 28px;
+.icml-section-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 18px 0 6px;
+    break-inside: avoid;
 }
 
-.huge{
-    font-size: 33px;
+.icml-body {
+    margin: 0 0 14px;
 }
 
-.HUGE{
-    font-size: 33px;
+.news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+    break-inside: avoid;
+}
+
+.news-date {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.news-text {
+    margin: 0;
+}
+
+.inline-list {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 0 0 14px;
+}
+
+footer.footerSize {
+    height: 24px;
+}
+
+@media (max-width: 900px) {
+    .icml-content {
+        column-count: 1;
+        column-rule: none;
+    }
 }
