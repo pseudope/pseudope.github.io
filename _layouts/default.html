@@ -12,23 +12,29 @@
     </script>
   </head>
   <body>
-    <div class="Margins">
-      <p class="LatexTitle">{{ page.title }}</p>
-      {% if page.author %} <p class="LatexName">{{ page.author }}</p> {% endif %}
-      {% if page.date %} <p class="LatexDate">{{ page.date }}</p> {% endif %}
-      
-      {% if page.abstract %}<div class="AbstractMargins">
-        <p class="LatexAbstract">Abstract</p>
-        <p class="LatexAbstractText">{{ page.abstract }}</p>
-      </div>{% endif %}
+    <div class="icml-page">
+      <header class="icml-header">
+        <hr class="icml-rule">
+        <h1 class="icml-title">{{ page.title }}</h1>
+        {% if page.author %}<p class="icml-authors">{{ page.author }}</p>{% endif %}
+        {% if page.affiliation %}<p class="icml-affiliation">{{ page.affiliation }}</p>{% endif %}
+        {% if page.date %}<p class="icml-date">{{ page.date }}</p>{% endif %}
+        {% if page.preprint %}<p class="icml-preprint">{{ page.preprint }}</p>{% endif %}
+        <hr class="icml-rule">
+      </header>
 
-      
-      {{ content }}
+      {% if page.abstract %}
+      <section class="icml-abstract">
+        <p class="icml-abstract-title">Abstract</p>
+        <p class="icml-abstract-text">{{ page.abstract }}</p>
+      </section>
+      {% endif %}
 
-
+      <main class="icml-content">
+        {{ content }}
+      </main>
     </div>
   </body>
   <footer class="footerSize">
-
   </footer>
 </html>
